@@ -7,14 +7,7 @@ class Login extends Component {
     habitName: "",
     frequency: "",
     errMsg: false,
-    habitList: [
-      {
-        id: 1,
-        habitName: "Exercise",
-        frequency: "daily",
-        isChecked: false,
-      },
-    ],
+    habitList: [],
   };
 
   componentDidMount() {

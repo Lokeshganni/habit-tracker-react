@@ -70,6 +70,10 @@ class Login extends Component {
     });
   };
 
+  handleDeleteHabit = (id) => {
+    localStorage.removeItem(habitItem);
+  };
+
   render() {
     const { frequency, habitName, habitList, errMsg } = this.state;
     console.log(habitList);
@@ -126,6 +130,12 @@ class Login extends Component {
                     value={each.isChecked}
                     onChange={(id) => this.handleCheckBox}
                   />
+                      <button
+                    onClick={(id) => this.handleDeleteHabit}
+                    type="button"
+                  >
+                    X
+                  </button>
                 </li>
               ))}
             </ul>
